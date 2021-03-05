@@ -7,7 +7,7 @@ public class Auto {
     //private int four;
     private static final double FUEL_PER_KM = 0.5;//konstanta
     private double kapacitaNadrze;
-    public double stavNadrze;
+    private double stavNadrze;
 
     public void drive(double distanceInKm){
         stavNadrze -= distanceInKm *FUEL_PER_KM;
@@ -15,6 +15,14 @@ public class Auto {
             stavNadrze=0;
         }
 
+    }
+
+    //metody getter a setter, citaju zapisuju menia hodnoty atribut
+    public double getStavNadrze(){
+        return stavNadrze;
+    }
+    public void setStavNadrze(double stavNadrze){
+        this.stavNadrze=stavNadrze;
     }
 
 }
