@@ -12,14 +12,14 @@ public class Auto {
 
     //Konstruktor -> vie java automaticky generovat , je to metoda bez navr typu, ma modifikator pristupu
     public Auto(double kapacitaNadrze){//cez toto Auto vytvaras tu triedu ako keby, keby si dal private ta neide
-
+            //typ pocet a  poraide arg v Auto sa musi lysit ak chces 2 + rozdielnych konstruktorov
         neojazdene = true;
         this.kapacitaNadrze=kapacitaNadrze;
     }
     public Auto(){
-        neojazdene = true;
-        this.kapacitaNadrze=100;
+       this(100);//konstruktor vola konstruktor ten horny nech sa nam posunu jeho udaje
     }
+
 
     public void drive(double distanceInKm){
         neojazdene=false;
