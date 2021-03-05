@@ -14,9 +14,8 @@ public class Auto {
     public Auto(){//cez toto Auto vytvaras tu triedu ako keby, keby si dal private ta neide
 
         neojazdene = true;
+        kapacitaNadrze=100;
     }
-
-
 
     public void drive(double distanceInKm){
         neojazdene=false;
@@ -31,8 +30,8 @@ public class Auto {
     public double getStavNadrze(){
         return stavNadrze;
    }
-   public void setStavNadrze(double stavNadrze){
-       this.stavNadrze=stavNadrze;
+   public void dotankovat(){
+        this.stavNadrze=kapacitaNadrze;
    }
     public String currentState(){
         String result;

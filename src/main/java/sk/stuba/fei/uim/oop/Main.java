@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
     Auto skoda = new Auto();
 
-skoda.setStavNadrze(100);
+skoda.dotankovat();
     System.out.println(skoda.currentState());
     skoda.drive(100);
 
