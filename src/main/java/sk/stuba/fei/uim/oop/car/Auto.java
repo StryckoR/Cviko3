@@ -8,8 +8,18 @@ public class Auto {
     private static final double FUEL_PER_KM = 0.5;//konstanta
     private double kapacitaNadrze;
     private double stavNadrze;
+    private boolean neojazdene;
+
+    //Konstruktor -> vie java automaticky generovat , je to metoda bez navr typu, ma modifikator pristupu
+    public Auto(){//cez toto Auto vytvaras tu triedu ako keby, keby si dal private ta neide
+
+        neojazdene = true;
+    }
+
+
 
     public void drive(double distanceInKm){
+        neojazdene=false;
         stavNadrze -= distanceInKm *FUEL_PER_KM;
         if(stavNadrze<0){
             stavNadrze=0;
@@ -20,9 +30,19 @@ public class Auto {
     //metody getter a setter, citaju zapisuju menia hodnoty atribut
     public double getStavNadrze(){
         return stavNadrze;
-    }
-    public void setStavNadrze(double stavNadrze){
-        this.stavNadrze=stavNadrze;
+   }
+   public void setStavNadrze(double stavNadrze){
+       this.stavNadrze=stavNadrze;
+   }
+    public String currentState(){
+        String result;
+        if(this.neojazdene){
+            result ="Auto je neojazdene.";
+        }else{
+            result="Auto je ojazdene";
+        }
+        result += stavNadrze+"\\"+kapacitaNadrze;
+        return result;
     }
 
 }

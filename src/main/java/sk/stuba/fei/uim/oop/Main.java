@@ -6,13 +6,14 @@ public class Main {
     public static void main(String[] args) {
     Auto skoda = new Auto();
 
+skoda.setStavNadrze(100);
+    System.out.println(skoda.currentState());
+    skoda.drive(100);
 
-    skoda.setStavNadrze(100);
-   skoda.drive(100);
-
-   System.out.println(skoda.getStavNadrze());
+    System.out.println(skoda.getStavNadrze());
     skoda.drive(200);
 
     System.out.println(skoda.getStavNadrze());
+    System.out.println(skoda.currentState());
     }
 }
