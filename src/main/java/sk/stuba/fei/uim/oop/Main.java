@@ -6,10 +6,12 @@ public class Main {
     public static void main(String[] args) {
     Auto skoda = new Auto();
 
-skoda.dotankovat();
+    System.out.println("Dotankoval som : "+skoda.dotankovat());
     System.out.println(skoda.currentState());
     skoda.drive(100);
 
+
+    System.out.println("Dotankoval som : "+skoda.dotankovat());
     System.out.println(skoda.getStavNadrze());
     skoda.drive(200);
 

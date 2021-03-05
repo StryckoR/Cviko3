@@ -30,8 +30,10 @@ public class Auto {
     public double getStavNadrze(){
         return stavNadrze;
    }
-   public void dotankovat(){
+   public double dotankovat(){
+        double diff=kapacitaNadrze-stavNadrze;
         this.stavNadrze=kapacitaNadrze;
+        return diff;
    }
     public String currentState(){
         String result;
