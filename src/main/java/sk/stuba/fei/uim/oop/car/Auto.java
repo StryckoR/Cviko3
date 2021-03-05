@@ -11,10 +11,10 @@ public class Auto {
     private boolean neojazdene;
 
     //Konstruktor -> vie java automaticky generovat , je to metoda bez navr typu, ma modifikator pristupu
-    public Auto(){//cez toto Auto vytvaras tu triedu ako keby, keby si dal private ta neide
+    public Auto(double kapacitaNadrze){//cez toto Auto vytvaras tu triedu ako keby, keby si dal private ta neide
 
         neojazdene = true;
-        kapacitaNadrze=100;
+        this.kapacitaNadrze=kapacitaNadrze;
     }
 
     public void drive(double distanceInKm){
