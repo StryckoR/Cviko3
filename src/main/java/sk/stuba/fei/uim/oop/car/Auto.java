@@ -16,6 +16,10 @@ public class Auto {
         neojazdene = true;
         this.kapacitaNadrze=kapacitaNadrze;
     }
+    public Auto(){
+        neojazdene = true;
+        this.kapacitaNadrze=100;
+    }
 
     public void drive(double distanceInKm){
         neojazdene=false;
